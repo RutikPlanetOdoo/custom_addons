@@ -1,0 +1,16 @@
+Search for a specific pattern in a file with grep:
+- grep -n 'Name to be searched' <specific file or folder / * for all >
+Create New Directory:
+- mkdir <dir name>
+Recursively remove a directory:
+- rm -r <dir name>
+Recursively copy the content of one file to a second file
+- cp -r <source folder name> <target folder name>
+Archive existing file
+- zip <zip filename> <name of the folder to be zipped>
+Unarchive an existing archive file.
+- unzip <zipped file name>
+Give read, write, and execute permission to owner, and read and execute permission to group and others:
+- chmod 755 <folder path>
+Change the ownership of a file:
+- chown <username> <folder path>

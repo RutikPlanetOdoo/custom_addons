@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="standard_info_form_view" model="ir.ui.view">
+            <field name="name">standard.info.form.view</field>
+            <field name="model">standard.info</field>
+            <field name="arch" type="xml">
+                <form string="Standard">
+                    <sheet>
+                        <group>
+                            <field name="standard_id"/>
+                            <field name="teacher_id"/>
+                            <field name="division"/>
+                            <!--                            <field name="teacher_id"/>-->
+<!--                            <field name="teacher_name"/>-->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="standard_info_tree_view" model="ir.ui.view">
+            <field name="name">standard.info.tree.view</field>
+            <field name="model">standard.info</field>
+            <field name="arch" type="xml">
+                <tree string="Tags">
+                    <field name="standard_id"/>
+                    <field name="division"/>
+<!--                    <field name="teacher_name"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="standard_action_view" model="ir.actions.act_window">
+            <field name="name">Standard Info</field>
+            <field name="res_model">standard.info</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+                id="standard_info_child_menu"
+                action="standard_action_view"
+                parent="hospital_erp.hospital_base_menu"
+                name="Standard Info"
+                sequence="1"/>
+    </data>
+</odoo>

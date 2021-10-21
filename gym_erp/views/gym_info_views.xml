@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="gym_info_inherit_view_training" model="ir.ui.view">
+            <field name="name">res.partner.inherit.view.training</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='function']" position="after">
+                    <field name="cus_name"/>
+                    <field name="join_date"/>
+                </xpath>
+                <xpath expr="//notebook/page[@name='internal_notes']" position="after">
+                    <page name="gym_note" string="Gym Info">
+                        <field name="new_gym_ids">
+                            <tree editable="bottom">
+                                <field name="schdl_date"/>
+                                <field name="wrkout_plan"/>
+                                <field name="in_date"/>
+                                <field name="out_date"/>
+                                <field name="gym_massage"/>
+                                <field name="supplement"/>
+                                <field name="price_supp_mass"/>
+                            </tree>
+                        </field>
+                        <group class="oe_subtotal_footer oe_right" colspan="2" name="total_price">
+                            <label for="total_price"/>
+                            <field name="total_price" nolabel="1" widget="monetary" readonly="True"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="cus_dob"/>
+                    <field name="cus_age"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

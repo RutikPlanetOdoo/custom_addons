@@ -2,19 +2,18 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Hospital ERP',
+    'name': 'Test ERP',
     'version': '1.0',
     'author': 'Rutik Pabharekar',
-    'category': 'Social',
-    'summary': 'Hospital Management tutorials ',
-    'description': "We are learning what is odoo and development in odoo",
+    'category': 'Testing',
+    'summary': 'Testing ERP for odoo 15',
+    'description': "Test",
     'website': 'https://www.odoo.com',
     'depends': [
-        'base'
+        'base',
     ],
     'data': [
         'security/ir.model.access.csv',
-        'views/doctors_info_views.xml',
     ],
     'installable': True,
     'application': True,

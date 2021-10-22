@@ -15,7 +15,7 @@
                 <xpath expr="//field[@name='payment_term_id']" position="after">
                        <field name="tax_discount" widget="radio"/>
                 </xpath>
-                <xpath expr="//field[@name='amount_untaxed']" position="after">
+                <xpath expr="//field[@name='tax_totals_json']" position="before">
                        <field name="tot_discount"/>
                 </xpath>
             </field>

@@ -2,12 +2,11 @@
 <odoo>
     <record id="view_sale_wizard_form" model="ir.ui.view">
         <field name="name">view.sale.wizard.form</field>
-        <field name="model">sale.wizard</field>
+        <field name="model">sale.customer</field>
         <field name="type">form</field>
-        <field name="arch" type="xml"> 
+        <field name="arch" type="xml">
             <form>
                 <group>
-                    <field name="expiration_date"/>
                 </group>
             </form>
             <notebook>
@@ -31,13 +30,15 @@
         </field>
     </record>
 
-    <record id="order_wizard_action_record" model="ir.actions.act_window">
-        <field name="name">Add Order Details</field>
-        <field name="res_model">sale.wizard</field>
+    <record id="sale_wizard_action_model" model="ir.actions.act_window">
+        <field name="name">Update Phone</field>
+        <field name="res_model">sale.customer</field>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_sale_wizard_form"/>
+        <field name="view_id" ref="view_customer_wizard_form"/>
         <field name="target">new</field>
-        <field name="binding_model_id" ref="sale.model_sale_order"/>
-        <field name="binding_view_types">form</field>
+        <field name="binding_model_id" ref="gym_erp.model_res_partner"/>
+        <field name="binding_view_types">form,list</field>
     </record>
+
+
 </odoo>

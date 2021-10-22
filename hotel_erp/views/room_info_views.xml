@@ -7,6 +7,7 @@
             <field name="arch" type="xml">
                 <form string="Room Info">
                     <sheet>
+
                         <group col="2">
                             <field name="room_num"/>
                             <field name="floor_num"/>
